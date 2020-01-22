@@ -1,4 +1,5 @@
 from my_staff import test_staff
+from my_staff import test_staff2
 
 
 def is_odd(n):
