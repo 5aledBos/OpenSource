@@ -1,4 +1,4 @@
-name: Python package
+name: Tests
 
 on: [push]
 
@@ -21,16 +21,6 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        pip install codecov
-    - name: Lint with pylint
-      run: |
-        pylint -E main_dir
     - name: Test with pytest
       run: |
-        pytest -s main_dir --pyargs -q main_dir/tests --cov --cov-report html --cov-report term
-    - name: Bandit
-      run: |
-        bandit main_dir -r --exclude main_dir/tests
-    - name: CodeCov
-      run: |
-        codecov --token=2ddd02ca-137f-4c13-9997-370272f405fb
+        pytest -s main_dir --pyargs -q main_dir/tests
