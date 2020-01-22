@@ -1,7 +1,3 @@
-from my_staff import test_staff
-from my_staff import test_staff2
-
-
 def is_odd(n):
     if isinstance(n, float) is True:
         return None
