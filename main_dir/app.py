@@ -1,10 +1,14 @@
 def is_odd(n):
+    if isinstance(n, float) is True:
+        return None
     if isinstance(n, int) is False:
         raise ValueError('Not an int')
     return n % 2 == 1
 
 
 def is_even(n):
+    if isinstance(n, float) is True:
+        return None
     if isinstance(n, int) is False:
         raise ValueError('Not an int')
     return n % 2 == 0
