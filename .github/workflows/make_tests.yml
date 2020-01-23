@@ -26,4 +26,4 @@ jobs:
         pytest -s main_dir --pyargs -q main_dir/tests
     - name: CodeCov
       run: |
-        codecov --token=42a1d270-8f79-454f-a9c1-eb4d6749ae57
+        codecov
