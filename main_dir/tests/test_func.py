@@ -13,7 +13,7 @@ class MyFunctionsTestCase(TestCase):
     def test_is_odd(self):
         num = 12345
         self.assertTrue(is_odd(num))
-        self.assertIsNone(is_even(1.3))
+        self.assertIsNone(is_odd(1.3))
         with self.assertRaises(ValueError):
             is_odd('NOT A NUMBER')
 
