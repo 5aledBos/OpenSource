@@ -23,7 +23,7 @@ jobs:
         pip install -r requirements.txt
     - name: Test with pytest
       run: |
-        pytest -s main_dir --pyargs -q main_dir/tests
+        pytest -s main_dir --pyargs -q main_dir/tests --cov --cov-report html --cov-report term
     - name: CodeCov
       run: |
         codecov --cover-xml
