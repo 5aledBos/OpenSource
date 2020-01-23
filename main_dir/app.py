@@ -1,5 +1,6 @@
 def is_odd(n):
     # comment
+    # comment2
     if isinstance(n, int) is False:
         raise ValueError('Not an int')
     return n % 2 == 1
