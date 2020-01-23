@@ -1,0 +1,29 @@
+name: Tests
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 2
+      matrix:
+        python-version: [3.6]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Test with pytest
+      run: |
+        pytest -s main_dir --pyargs -q main_dir/tests
+    - name: CodeCov
+      run: |
+        codecov --token=42a1d270-8f79-454f-a9c1-eb4d6749ae57

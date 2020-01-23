@@ -6,3 +6,5 @@ pylint
 pytest
 bandit
 black
+coverage
+codecov
