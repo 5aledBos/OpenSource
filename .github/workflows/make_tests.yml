@@ -26,4 +26,4 @@ jobs:
         pytest -s main_dir --pyargs -q main_dir/tests
     - name: CodeCov
       run: |
-        codecov
+        codecov --cover-xml
